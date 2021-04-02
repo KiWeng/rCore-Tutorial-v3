@@ -7,3 +7,5 @@ user/target/*
 user/.idea/*
 user/Cargo.lock
 tools/
+
+easy-fs-fuse/
