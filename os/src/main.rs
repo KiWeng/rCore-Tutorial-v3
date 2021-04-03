@@ -44,7 +44,7 @@ pub fn rust_main() -> ! {
 
     clear_bss();
     log::set_logger(&ConsoleLogger).unwrap();
-    log::set_max_level(LevelFilter::Trace);
+    log::set_max_level(LevelFilter::Off);
 
     info!(".text [{:#x}, {:#x})", stext as usize, etext as usize);
     info!(".rodata [{:#x}, {:#x})", srodata as usize, erodata as usize);
