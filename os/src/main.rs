@@ -44,7 +44,7 @@ pub fn rust_main() -> ! {
 
     clear_bss();
     log::set_logger(&ConsoleLogger).unwrap();
-    log::set_max_level(LevelFilter::Off);
+    log::set_max_level(LevelFilter::Info);
 
     info!(".text [{:#x}, {:#x})", stext as usize, etext as usize);
     info!(".rodata [{:#x}, {:#x})", srodata as usize, erodata as usize);
@@ -54,6 +54,8 @@ pub fn rust_main() -> ! {
         ".boot_stack [{:#x}, {:#x})",
         boot_stack as usize, boot_stack_top as usize
     );
+
+
     println!("[kernel] Hello, world!");
     trap::init();
     batch::init();
